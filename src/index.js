@@ -18,7 +18,14 @@ let cart = []
 
 // Getting the products list
 class  Products {
+ async getProducts() {
+   try {
+let result = await fetch('products',json)
+return result
+ } catch (error) {
 
+  }
+ }   
 }
 
 // Display products

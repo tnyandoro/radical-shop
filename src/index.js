@@ -25,3 +25,9 @@ class  Products {
 class UI {
 
 }
+// Local storage
+class Storage {
+
+}
+
+// Add listeners

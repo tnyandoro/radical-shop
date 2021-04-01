@@ -31,3 +31,6 @@ class Storage {
 }
 
 // Add listeners
+document.addEventListener ("DOMContentLoaded", () =>{
+  
+})

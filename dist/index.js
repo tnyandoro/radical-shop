@@ -1,5 +1,3 @@
-import './style.css';
-
 // Variables
 
 const cartBtn = document.querySelector('.cart-btn');
@@ -18,14 +16,14 @@ let cart = []
 
 // Getting the products list
 class  Products {
- async getProducts() {
-   try {
-let result = await fetch('products',json)
-return result
- } catch (error) {
-
+  async getProducts() {
+    try {
+      let result = await fetch('products.json')
+      return result
+      } catch (error) {
+        console.log(error);
+    }
   }
- }   
 }
 
 // Display products
@@ -38,7 +36,7 @@ class Storage {
 }
 
 // Add listeners
-document.addEventListener ("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () =>{
   const ui = new UI();
   const products = new Products();
 

@@ -1,47 +1,44 @@
-import './style.css';
+import "./style.css";
 
 // Variables
 
-const cartBtn = document.querySelector('.cart-btn');
-const closeCartBtn = document.querySelector('.close-cart');
-const clearCartBtn = document.querySelector('.clear-cart');
-const cartDOM = document.querySelector('.cart');
-const cartOverlay = document.querySelector('.cart-overlay');
-const cartItems = document.querySelector('.cart-items');
-const cartTotal = document.querySelector('.cart-total');
-const cartContent = document.querySelector('.cart-content');
-const productsDOM = document.querySelector('.products-center');
+const cartBtn = document.querySelector(".cart-btn");
+const closeCartBtn = document.querySelector(".close-cart");
+const clearCartBtn = document.querySelector(".clear-cart");
+const cartDOM = document.querySelector(".cart");
+const cartOverlay = document.querySelector(".cart-overlay");
+const cartItems = document.querySelector(".cart-items");
+const cartTotal = document.querySelector(".cart-total");
+const cartContent = document.querySelector(".cart-content");
+const productsDOM = document.querySelector(".products-center");
 
-let cart = []
+let cart = [];
 
-// Set classes 
+// Set classes
 
 // Getting the products list
-class  Products {
- async getProducts() {
-   try {
-let result = await fetch('products',json)
-return result
- } catch (error) {
-
+class Products {
+  async getProducts() {
+    try {
+      let result = await fetch("products", json);
+      let data = await result.json();
+      return data;
+    } catch (error) {
+      console.log(error);
+    }
   }
- }   
 }
 
 // Display products
-class UI {
-
-}
+class UI {}
 // Local storage
-class Storage {
-
-}
+class Storage {}
 
 // Add listeners
-document.addEventListener ("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
   const ui = new UI();
   const products = new Products();
 
   // Get all productsDOM
-  products.getProducts().then(data => console.log(data));
-})
+  products.getProducts().then((data) => console.log(data));
+});

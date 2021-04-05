@@ -25,6 +25,7 @@
     "webpack-cli": "^4.6.0"
   },
   "dependencies": {
+    "contentful": "^8.2.1",
     "lodash": "^4.17.21"
   }
 }
